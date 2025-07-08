@@ -23,6 +23,18 @@ export const Navbar = () => {
     }
    }
 
+   const handleResumeDownload = () => {
+    // Replace with your actual resume file path
+    const resumeUrl = '/resume.pdf'; // Put your resume.pdf in the public folder
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Himanshu_Resume.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+   }
+
    return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'glass shadow-lg' : 'bg-transparent'
@@ -69,10 +81,10 @@ export const Navbar = () => {
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={handleResumeDownload}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground flex items-center gap-2"
             >
-              Get In Touch
+              Resume
             </Button>
           </div>
         </nav>

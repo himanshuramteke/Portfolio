@@ -4,7 +4,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold text-primary mb-2">Portfolio</h3>
+            <h3 className="text-2xl font-bold text-primary mb-2">Himanshu.dev</h3>
             <p className="text-muted-foreground">
               Crafting digital experiences with passion and precision
             </p>
@@ -28,7 +28,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/30 text-center">
           <p className="text-muted-foreground">
-            © 2024 John Doe. All rights reserved.
+            © {new Date().getFullYear()} Himanshu Ramteke. All rights reserved.
           </p>
         </div>
       </div>

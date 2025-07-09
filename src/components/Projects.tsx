@@ -111,14 +111,14 @@ export const Projects = () => {
                 <div className="flex gap-3 pt-2">
                   <Button 
                     size="sm" 
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1 cursor-pointer"
                   >
                     Live Demo
                   </Button>
                   <Button 
                     size="sm" 
                     variant="outline" 
-                    className="border-primary/20 hover:border-primary/40 flex-1"
+                    className="border-primary/20 hover:border-primary/40 flex-1 cursor-pointer"
                   >
                     View Code
                   </Button>

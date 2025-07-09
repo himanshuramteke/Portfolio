@@ -1,36 +1,44 @@
 "use client";
 
-import { useState } from "react"
+import { useState } from "react";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
 export const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: ""
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
+  };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-       setFormData({
-        ...formData,
-        [e.target.name] : e.target.value
-       });
-    };
-
-   const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     toast("Message Sent!", {
       description: "Thank you for your message. I'll get back to you soon!",
     });
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
   };
 
-    return (
+  return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -38,47 +46,87 @@ export const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have a project in mind or want to collaborate? I&apos;d love to hear from you!
+            Have a project in mind or want to collaborate? I&apos;d love to hear
+            from you!
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="space-y-8 animate-slide-in-left">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Let&apos;s Connect</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Let&apos;s Connect
+              </h3>
               <p className="text-muted-foreground mb-8">
-                I&apos;m always open to discussing new opportunities, creative projects, 
-                or potential collaborations. Don&apos;t hesitate to reach out!
+                I&apos;m always open to discussing new opportunities, creative
+                projects, or potential collaborations. Don&apos;t hesitate to
+                reach out!
               </p>
             </div>
 
             <div className="space-y-6">
               <div className="glass rounded-lg p-6">
                 <h4 className="font-semibold text-foreground mb-2">Email</h4>
-                <p className="text-primary">john.doe@example.com</p>
+                <p className="text-primary cursor-pointer">
+                  himanshuramteke007@gmail.com
+                </p>
               </div>
-              
+
               <div className="glass rounded-lg p-6">
                 <h4 className="font-semibold text-foreground mb-2">Location</h4>
-                <p className="text-muted-foreground">San Francisco, CA</p>
+                <p className="text-muted-foreground">Nagpur, India</p>
               </div>
-              
+
               <div className="glass rounded-lg p-6">
-                <h4 className="font-semibold text-foreground mb-2">Response Time</h4>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Response Time
+                </h4>
                 <p className="text-muted-foreground">Usually within 24 hours</p>
               </div>
             </div>
 
             <div className="flex space-x-4">
-              <Button variant="outline" size="sm" className="border-primary/20 hover:border-primary/40">
-                LinkedIn
-              </Button>
-              <Button variant="outline" size="sm" className="border-primary/20 hover:border-primary/40">
-                GitHub
-              </Button>
-              <Button variant="outline" size="sm" className="border-primary/20 hover:border-primary/40">
-                Twitter
-              </Button>
+              <a
+                href="https://www.linkedin.com/in/himanshuramteke20/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-primary/20 hover:border-primary/40 cursor-pointer"
+                >
+                  LinkedIn
+                </Button>
+              </a>
+
+              <a
+                href="https://github.com/himanshuramteke"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-primary/20 hover:border-primary/40 cursor-pointer"
+                >
+                  GitHub
+                </Button>
+              </a>
+
+              <a
+                href="https://x.com/IamHimanshu_dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-primary/20 hover:border-primary/40 cursor-pointer"
+                >
+                  Twitter
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -86,7 +134,8 @@ export const Contact = () => {
             <CardHeader>
               <CardTitle className="text-foreground">Send Message</CardTitle>
               <CardDescription>
-                Fill out the form below and I&apos;ll get back to you as soon as possible.
+                Fill out the form below and I&apos;ll get back to you as soon as
+                possible.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -102,7 +151,7 @@ export const Contact = () => {
                     className="bg-background/50 border-border/50 focus:border-primary"
                   />
                 </div>
-                
+
                 <div>
                   <Input
                     type="email"
@@ -114,7 +163,7 @@ export const Contact = () => {
                     className="bg-background/50 border-border/50 focus:border-primary"
                   />
                 </div>
-                
+
                 <div>
                   <Textarea
                     name="message"
@@ -126,10 +175,10 @@ export const Contact = () => {
                     className="bg-background/50 border-border/50 focus:border-primary resize-none"
                   />
                 </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+
+                <Button
+                  type="submit"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer"
                 >
                   Send Message
                 </Button>

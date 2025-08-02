@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
@@ -43,8 +43,8 @@ export const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">
-            Full Stack Developer, Passionate About Building Scalable and
-            Dynamic Web Applications.
+            Full Stack Developer, Passionate About Building Scalable and Dynamic
+            Web Applications.
           </p>
 
           <div className="flex justify-center gap-6 mb-8">
@@ -77,15 +77,6 @@ export const Hero = () => {
             >
               <Twitter size={28} />
             </a>
-
-            <a
-              href="mailto:himanshuramteke007@gmail.com"
-              aria-label="Email"
-              className="text-2xl text-primary hover:text-primary/80 transition-colors"
-            >
-              <Mail size={28} />
-            </a>
-
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button

@@ -64,6 +64,43 @@ const projects = [
     demo: "twitter-clone-o1s0.onrender.com/",
     code: "https://github.com/himanshuramteke/Twitter-clone",
   },
+  {
+    id: 4,
+    title: "Streamify",
+    description:
+      "Streamify is a modern social networking platform designed to connect people to learn new Languages, facilitate communication, and foster communities.",
+    image: "/streamify-homepage.png",
+    tags: [
+      "React.js",
+      "Express.js",
+      "Node.js",
+      "DaisyUI",
+      "TailwindCSS",
+      "Tanstack-Query",
+      "MongoDB",
+      "Stream-SDK",
+    ],
+    demo: "streamify-t3pa.onrender.com/",
+    code: "https://github.com/himanshuramteke/Streamify",
+  },
+  {
+    id: 5,
+    title: "CodeMeet",
+    description:
+      "CodeMeet is a modern video calling interview platform designed to streamline the interview process. It provides a seamless experience for both interviewers and candidates, offering features like video calls, screen sharing, code editing, and role-based access control.",
+    image: "/meeting-page.png",
+    tags: [
+      "React.js",
+      "Next.js",
+      "Typescript",
+      "Shadcn UI",
+      "Convex",
+      "Stream-SDK",
+      "Clerk",
+    ],
+    demo: "codemeet-six.vercel.app",
+    code: "https://github.com/himanshuramteke/codemeet",
+  },
 ];
 
 export const Projects = () => {

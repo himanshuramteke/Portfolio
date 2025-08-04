@@ -16,7 +16,7 @@ const projects = [
     title: "CodeSandbox - An Online IDE ",
     description:
       "CodeSandbox - It provides a collaborative code editing environment for your 'React' projects with real-time file editing, live preview, and terminal integration.",
-    image: "/Codesandbox-image.png",
+    image: "/codesandbox-editorPage.png",
     tags: [
       "React.js",
       "Node.js",

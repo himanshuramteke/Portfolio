@@ -23,15 +23,9 @@ export const Navbar = () => {
     }
   };
 
-  const handleResumeDownload = () => {
-    const resumeUrl = "/resume.pdf"; // Place your resume in the public folder
-    const link = document.createElement("a");
-    link.href = resumeUrl;
-    link.download = "Himanshu_Resume.pdf";
-    link.target = "_blank";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleResumeView = () => {
+    const resumeUrl = "/HimanshuRamteke-resume.pdf";
+    window.open(resumeUrl, "_blank");
   };
 
   return (
@@ -61,7 +55,7 @@ export const Navbar = () => {
           <div className="flex items-center space-x-4">
             <ThemeToggle />
             <Button
-              onClick={handleResumeDownload}
+              onClick={handleResumeView}
               className="bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer"
             >
               Resume
